@@ -5,28 +5,25 @@ require 'solidus_payu_latam/version'
 Gem::Specification.new do |s|
   s.name        = 'solidus_payu_latam'
   s.version     = SolidusPayuLatam::VERSION
-  s.summary     = 'TODO'
-  s.description = 'TODO'
-  s.license     = 'BSD-3-Clause'
+  s.summary     = 'Adds Solidus support for Payu Latam Gateway'
+  s.description = s.summary
+  s.license     = 'MIT'
 
-  # s.author    = 'You'
-  # s.email     = 'you@example.com'
-  # s.homepage  = 'http://www.example.com'
+  s.author      = 'César Carruitero'
+  s.email       = 'ccarruitero@protonmail.com'
+  s.homepage    = 'https://github.com/ccarruitero/solidus_payu_latam'
 
-  s.files = Dir["{app,config,db,lib}/**/*", 'LICENSE', 'Rakefile', 'README.md']
-  s.test_files = Dir['test/**/*']
+  s.files       = `git ls-files`.split("\n")
+  s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
 
   s.add_dependency 'solidus_core', '~> 1.0'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'poltergeist'
-  s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'sass-rails'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'factory_girl'
   s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'rubocop', '0.37.2'
-  s.add_development_dependency 'rubocop-rspec', '1.4.0'
+  s.add_development_dependency 'rubocop'
+  s.add_development_dependency 'rubocop-rspec'
   s.add_development_dependency 'simplecov'
-  s.add_development_dependency 'sqlite3'
 end
