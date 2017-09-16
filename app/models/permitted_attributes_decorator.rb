@@ -1,0 +1,1 @@
+Spree::PermittedAttributes.singleton_class.prepend SolidusPayuLatam::PermittedAttributesConcern
