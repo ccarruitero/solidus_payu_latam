@@ -1,0 +1,1 @@
+Spree::Payment.include SolidusPayuLatam::InjectCustomerDocumentConcern

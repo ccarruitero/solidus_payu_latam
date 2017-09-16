@@ -27,7 +27,7 @@ module Solidus
 
     def purchase(amount, credit_card, gateway_options)
       authorization = authorization_str(credit_card)
-      options = add_missing_fields(gateway_options, credit_card[:gateway_customer_profile_id])
+      options = add_missing_fields(gateway_options)
       provider.purchase(amount, authorization, options)
     end
 
@@ -37,7 +37,8 @@ module Solidus
       "#{credit_card[:cc_type]}|#{credit_card[:gateway_payment_profile_id]}"
     end
 
-    def add_missing_fields(options, dni_number)
+    def add_missing_fields(options)
+      dni_number = options[:customer_document]
       options.merge(
         buyer_email: options[:email],
         buyer_name: options[:shipping_address][:name],

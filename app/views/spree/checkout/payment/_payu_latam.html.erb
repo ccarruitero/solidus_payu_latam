@@ -3,7 +3,7 @@
 
 <p class="field">
   <%= label_tag "document", Spree.t(:document) %><span class="required">*</span><br />
-  <%= text_field_tag "#{param_prefix}[document]", '', id: 'customer_document', class: "required customerDocument", "payu-content": "document" %>
+  <%= text_field_tag '[order][customer_document]', '', id: 'customer_document', class: "required customerDocument", "payu-content": "document" %>
 </p>
 <script type="text/javascript" src="http://gateway.payulatam.com/ppp-web-gateway/javascript/PayU.js"></script>
 <script type="text/javascript">
@@ -26,7 +26,6 @@
       var token = response.token;
       var customerDocument = Spree.payuLatamPaymentMethod.find('.customerDocument').val();
       Spree.payuLatamPaymentMethod.append("<input type='hidden' name='payment_source[" + paymentMethodId + "][gateway_payment_profile_id]' value='" + token + "'/>");
-      Spree.payuLatamPaymentMethod.append("<input type='hidden' name='payment_source[" + paymentMethodId + "][gateway_customer_profile_id]' value='" + customerDocument + "'/>");
       return Spree.payuLatamPaymentMethod.parents("form").get(0).submit();
     }
   }
