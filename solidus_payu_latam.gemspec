@@ -1,5 +1,5 @@
-# encoding: UTF-8
 $:.push File.expand_path('../lib', __FILE__)
+
 require 'solidus_payu_latam/version'
 
 Gem::Specification.new do |s|
@@ -16,7 +16,9 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
 
-  s.add_dependency 'solidus_core', '~> 1.0'
+  s.add_dependency 'solidus_core'
+  s.add_dependency 'solidus_support'
+  s.add_dependency 'activemerchant'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'poltergeist'

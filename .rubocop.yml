@@ -1,3 +1,4 @@
+require: rubocop-rspec
 # Relaxed.Ruby.Style
 
 AllCops:
@@ -42,9 +43,6 @@ Performance/Count:
   Enabled: false
 
 Style/RaiseArgs:
-  Enabled: false
-
-Style/OpMethod:
   Enabled: false
 
 # We can use good judgement here
@@ -206,6 +204,10 @@ Lint/HandleExceptions:
 Metrics/AbcSize:
   Enabled: false
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/*/*'
+
 Metrics/BlockNesting:
   Enabled: false
 
@@ -228,4 +230,7 @@ Metrics/ParameterLists:
   Enabled: false
 
 Metrics/PerceivedComplexity:
+  Enabled: false
+
+Naming/BinaryOperatorParameterName:
   Enabled: false

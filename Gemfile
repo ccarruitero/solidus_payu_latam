@@ -6,3 +6,10 @@ branch = ENV.fetch('SOLIDUS_BRANCH', 'master')
 gem 'solidus', github: 'solidusio/solidus', branch: branch
 
 gemspec
+
+gem 'pry'
+
+group :test do
+  gem 'ffaker'
+  gem 'sqlite3'
+end
