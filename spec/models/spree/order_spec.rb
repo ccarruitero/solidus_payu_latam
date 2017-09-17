@@ -15,9 +15,13 @@ describe Spree::Order, type: :model do
     end
 
     context 'payment_failed event' do
-      it 'only have transition from complete' do
-        event = Spree::Order.state_machine.events[:payment_failed]
+      let(:event) { Spree::Order.state_machine.events[:payment_failed] }
+
+      it 'not have confirm state' do
         expect(event.known_states.include?(:confirm)).to be(false)
+      end
+
+      it 'only have transition from/to payment' do
         expect(event.known_states).to eq([:payment])
       end
     end

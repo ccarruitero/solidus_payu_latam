@@ -1,7 +1,5 @@
 module PayuLatamHelper
   def setup_payu_latam_gateway
-    Spree::Config.set(auto_capture: true)
-
     Solidus::Gateway::PayuLatamGateway.create!(
       name: 'Payu Latam',
       preferred_merchant_id: '508029',
@@ -22,8 +20,8 @@ module PayuLatamHelper
   end
 
   def fill_address(country)
-    fill_in 'First Name', with: 'Han'
-    fill_in 'Last Name', with: 'Solo'
+    fill_in 'First Name', with: 'APPROVED'
+    fill_in 'Last Name', with: ''
     fill_in 'Street Address', with: 'YT-1300'
     fill_in 'City', with: 'Mos Eisley'
     select 'United States of America', from: 'Country'
