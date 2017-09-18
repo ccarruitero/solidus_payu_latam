@@ -4,7 +4,6 @@ module Solidus
     preference :account_id, :string
     preference :api_login, :string
     preference :api_key, :string
-    preference :public_key, :string
     preference :account_country, :string, default: 'PE'
 
     def provider_class
@@ -48,18 +47,7 @@ module Solidus
       provider.refund(amount, authorization, options)
     end
 
-    def purchase_tokenization(amount, credit_card, gateway_options)
-      authorization = authorization_str(credit_card)
-      cvv = credit_card.verification_value
-      options = add_missing_fields(gateway_options, cvv)
-      provider.purchase(amount, authorization, options)
-    end
-
     private
-
-    def authorization_str(credit_card)
-      "#{credit_card[:cc_type]}|#{credit_card[:gateway_payment_profile_id]}"
-    end
 
     def add_missing_fields(options, cvv)
       dni_number = options[:customer_document]

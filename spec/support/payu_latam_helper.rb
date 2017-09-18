@@ -5,8 +5,7 @@ module PayuLatamHelper
       preferred_merchant_id: '508029',
       preferred_account_id: '512323',
       preferred_api_login: 'pRRXKOl8ikMmt9u',
-      preferred_api_key: '4Vj8eK4rloUd272L48hsrarnUA',
-      preferred_public_key: 'PKaC6H4cEDJD919n705L544kSU'
+      preferred_api_key: '4Vj8eK4rloUd272L48hsrarnUA'
     )
   end
 
