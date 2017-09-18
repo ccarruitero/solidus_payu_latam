@@ -18,7 +18,8 @@ require File.expand_path('../dummy/config/environment.rb', __FILE__)
 require 'rspec/rails'
 require 'database_cleaner'
 require 'ffaker'
-
+require 'vcr'
+require 'webmock'
 require 'capybara/rspec'
 require 'capybara/poltergeist'
 Capybara.register_driver(:poltergeist) do |app|
@@ -37,6 +38,7 @@ require 'spree/testing_support/capybara_ext'
 require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/factories'
 require 'spree/testing_support/url_helpers'
+require 'spree/testing_support/preferences'
 
 # Requires factories defined in lib/solidus_payu_latam/factories.rb
 require 'solidus_payu_latam/factories'
@@ -55,6 +57,7 @@ RSpec.configure do |config|
   # visit spree.admin_path
   # current_path.should eql(spree.products_path)
   config.include Spree::TestingSupport::UrlHelpers
+  config.include Spree::TestingSupport::Preferences
 
   # == Mock Framework
   #
@@ -84,6 +87,7 @@ RSpec.configure do |config|
   config.before do
     DatabaseCleaner.strategy = RSpec.current_example.metadata[:js] ? :truncation : :transaction
     DatabaseCleaner.start
+    reset_spree_preferences
   end
 
   # After each spec clean the database.
@@ -93,4 +97,11 @@ RSpec.configure do |config|
 
   config.fail_fast = ENV['FAIL_FAST'] || false
   config.order = 'random'
+end
+
+VCR.configure do |c|
+  c.cassette_library_dir = "spec/cassettes"
+  c.hook_into :webmock
+  c.ignore_localhost = true
+  c.configure_rspec_metadata!
 end

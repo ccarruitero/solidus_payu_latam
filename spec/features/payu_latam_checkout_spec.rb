@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Payu Latam checkout', type: :feature do
+describe 'Payu Latam checkout', :vcr, type: :feature do
   let(:zone) { create(:zone) }
   let(:country) { create(:country) }
   let(:product) { create(:product) }

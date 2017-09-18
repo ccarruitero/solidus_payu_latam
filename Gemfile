@@ -12,4 +12,6 @@ gem 'pry'
 group :test do
   gem 'ffaker'
   gem 'sqlite3'
+  gem 'vcr'
+  gem 'webmock'
 end
