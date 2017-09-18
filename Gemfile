@@ -15,3 +15,5 @@ group :test do
   gem 'vcr'
   gem 'webmock'
 end
+
+gem 'activemerchant', github: 'activemerchant/active_merchant'
