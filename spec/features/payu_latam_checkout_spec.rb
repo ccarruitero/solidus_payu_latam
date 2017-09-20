@@ -23,8 +23,6 @@ describe 'Payu Latam checkout', :vcr, type: :feature do
     end
 
     it 'can process a valid payment', js: true do
-      sleep(5)
-      # wait to payU.getPaymentMethods()
       fill_credit_card '4111 1111 1111 1111', '32144457'
       click_button 'Save and Continue'
       expect(page).to have_content('Your order has been processed successfully')
@@ -52,8 +50,6 @@ describe 'Payu Latam checkout', :vcr, type: :feature do
       stub_authorization!
 
       before do
-        sleep(5)
-        # wait to payU.getPaymentMethods()
         fill_credit_card '4111 1111 1111 1111', '32144457'
         click_button 'Save and Continue'
       end
