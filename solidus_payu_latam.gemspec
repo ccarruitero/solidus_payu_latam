@@ -16,14 +16,14 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
 
+  s.add_dependency 'activemerchant'
   s.add_dependency 'solidus_core'
   s.add_dependency 'solidus_support'
-  s.add_dependency 'activemerchant'
 
   s.add_development_dependency 'capybara'
-  s.add_development_dependency 'poltergeist'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'factory_bot'
+  s.add_development_dependency 'poltergeist'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'rubocop'
   s.add_development_dependency 'rubocop-rspec'

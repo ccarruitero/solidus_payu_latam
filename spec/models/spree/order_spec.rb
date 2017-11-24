@@ -9,12 +9,12 @@ describe Spree::Order, type: :model do
     expect(order.customer_document).to eq(document)
   end
 
-  context 'state_machine' do
+  describe 'state_machine' do
     it 'dont have confirm state' do
       expect(Spree::Order.checkout_steps.keys.include?(:confirm)).to be(false)
     end
 
-    context 'payment_failed event' do
+    context 'with payment_failed event' do
       let(:event) { Spree::Order.state_machine.events[:payment_failed] }
 
       it 'not have confirm state' do
