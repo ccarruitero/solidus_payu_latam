@@ -44,7 +44,7 @@ require 'spree/testing_support/preferences'
 require 'solidus_payu_latam/factories'
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   config.include PayuLatamHelper
 
   # Infer an example group's spec type from the file location.

@@ -5,7 +5,7 @@ require 'solidus_payu_latam/version'
 Gem::Specification.new do |s|
   s.name        = 'solidus_payu_latam'
   s.version     = SolidusPayuLatam::VERSION
-  s.summary     = 'Adds Solidus support for Payu Latam Gateway'
+  s.summary     = 'Adds Solidus support for payments with Payu Latam Gateway'
   s.description = s.summary
   s.license     = 'MIT'
 
@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'poltergeist'
   s.add_development_dependency 'database_cleaner'
-  s.add_development_dependency 'factory_girl'
+  s.add_development_dependency 'factory_bot'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'rubocop'
   s.add_development_dependency 'rubocop-rspec'
