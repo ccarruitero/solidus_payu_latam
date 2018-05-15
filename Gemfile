@@ -11,8 +11,8 @@ gem 'pry'
 
 group :test do
   gem 'ffaker'
-  gem 'mysql2'
-  gem 'pg'
+  gem 'mysql2', '0.4.10'
+  gem 'pg', '~> 0.15'
   gem 'puma'
   gem 'sqlite3'
   gem 'vcr'
