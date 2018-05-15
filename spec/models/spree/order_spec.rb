@@ -11,7 +11,7 @@ describe Spree::Order, type: :model do
 
   describe 'state_machine' do
     it 'dont have confirm state' do
-      expect(Spree::Order.checkout_steps.keys.include?(:confirm)).to be(false)
+      expect(Spree::Order.checkout_steps.key?(:confirm)).to be(false)
     end
 
     context 'with payment_failed event' do
