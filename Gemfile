@@ -13,6 +13,7 @@ group :test do
   gem 'ffaker'
   gem 'mysql2'
   gem 'pg'
+  gem 'puma'
   gem 'sqlite3'
   gem 'vcr'
   gem 'webmock'
