@@ -4,7 +4,7 @@ module Solidus
     preference :account_id, :string
     preference :api_login, :string
     preference :api_key, :string
-    preference :account_country, :string, default: 'PE'
+    preference :payment_country, :string, default: 'PE'
 
     def provider_class
       ActiveMerchant::Billing::PayuLatamGateway
@@ -27,13 +27,11 @@ module Solidus
     end
 
     def capture(amount, authorization, gateway_options)
-      options = add_payment_country(gateway_options, preferred_account_country)
-      provider.capture(amount, authorization, options)
+      provider.capture(amount, authorization, gateway_options)
     end
 
     def void(authorization, gateway_options)
-      options = add_payment_country(gateway_options, preferred_account_country)
-      provider.void(authorization, options)
+      provider.void(authorization, gateway_options)
     end
 
     def purchase(amount, credit_card, gateway_options)
@@ -43,8 +41,7 @@ module Solidus
     end
 
     def credit(amount, authorization, gateway_options)
-      options = add_payment_country(gateway_options, preferred_account_country)
-      provider.refund(amount, authorization, options)
+      provider.refund(amount, authorization, gateway_options)
     end
 
     private
@@ -56,14 +53,7 @@ module Solidus
         buyer_name: options[:shipping_address][:name],
         buyer_dni_number: dni_number,
         dni_number: dni_number,
-        payment_country: preferred_account_country,
         cvv: cvv
-      )
-    end
-
-    def add_payment_country(options, payment_country)
-      options.merge(
-        payment_country: payment_country
       )
     end
   end
