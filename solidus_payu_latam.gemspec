@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 $:.push File.expand_path('lib', __dir__)
 
 require 'solidus_payu_latam/version'

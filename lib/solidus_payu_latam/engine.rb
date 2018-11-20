@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SolidusPayuLatam
   class Engine < Rails::Engine
     engine_name 'solidus_payu_latam'

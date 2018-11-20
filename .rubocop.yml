@@ -5,7 +5,7 @@ AllCops:
   Exclude:
     - 'spec/dummy/**/*'
     - 'vendor/bundle/**/*'
-  TargetRubyVersion: 2.1
+  TargetRubyVersion: 2.5
 
 # Sometimes I believe this reads better
 # This also causes spacing issues on multi-line fixes

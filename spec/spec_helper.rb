@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Run Coverage report
 require 'simplecov'
 SimpleCov.start do

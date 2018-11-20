@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SolidusPayuLatam
   module InjectCustomerDocumentConcern
     extend ActiveSupport::Concern

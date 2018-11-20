@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PayuLatamHelper
   def setup_payu_latam_gateway
     Solidus::Gateway::PayuLatamGateway.create!(

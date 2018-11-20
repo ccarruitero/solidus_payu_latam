@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Solidus
   class Gateway::PayuLatamGateway < ::Spree::Gateway
     preference :merchant_id, :string
