@@ -1,1 +1,1 @@
-rvm --create use 2.4.1@solidus_payu_latam
+rvm --create use 2.5.1@solidus_payu_latam
