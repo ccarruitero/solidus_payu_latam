@@ -9,7 +9,7 @@ before_install:
 script:
   - bundle exec rake
 rvm:
-  - 2.5.1
+  - 2.6.0
 env:
   matrix:
     - SOLIDUS_BRANCH=v2.5 DB=postgres
