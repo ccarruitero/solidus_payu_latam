@@ -12,11 +12,11 @@ module PayuLatamHelper
   end
 
   def fill_credit_card(number, document)
-    fill_in 'Card Number', with: number, visible: false
+    page.execute_script("$('#card_number').val('#{number}')")
     # Otherwise ccType field does not get updated correctly
-    page.execute_script("$('.cardNumber').trigger('change')")
+    page.execute_script("$('#card_number').trigger('change')")
     fill_in 'Card Code', with: '123'
-    fill_in 'Expiration', with: "01 / #{Time.now.year + 1}"
+    page.execute_script("$('#card_expiry').val('09 / #{Time.now.year + 1}')")
     fill_in 'customer_document', with: document
   end
 
