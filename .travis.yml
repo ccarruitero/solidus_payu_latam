@@ -23,3 +23,6 @@ env:
     - SOLIDUS_BRANCH=v2.7 DB=mysql
     - SOLIDUS_BRANCH=v2.8 DB=mysql
     - SOLIDUS_BRANCH=master DB=mysql
+services:
+  - mysql
+  - postgresql
