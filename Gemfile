@@ -9,8 +9,6 @@ gem 'solidus', github: 'solidusio/solidus', branch: branch
 
 gemspec
 
-gem 'pry'
-
 gem 'ffaker'
 gem 'mysql2', '~> 0.5'
 gem 'pg', '~> 1.1'
