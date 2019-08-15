@@ -16,13 +16,6 @@ Style/BracesAroundHashParameters:
 Style/ClassVars:
   Enabled: false
 
-# We need these names for backwards compatability
-Style/PredicateName:
-  Enabled: false
-
-Style/AccessorMethodName:
-  Enabled: false
-
 # This has been used for customization
 Style/MutableConstant:
   Enabled: false
@@ -39,9 +32,6 @@ Style/WordArray:
 Style/ConditionalAssignment:
   Enabled: false
 
-Performance/Count:
-  Enabled: false
-
 Style/RaiseArgs:
   Enabled: false
 
@@ -51,33 +41,6 @@ Style/RegexpLiteral:
 
 # Unicode comments are useful
 Style/AsciiComments:
-  Enabled: false
-
-Lint/EndAlignment:
-  Enabled: false
-
-Style/ElseAlignment:
-  Enabled: false
-
-Style/IndentationWidth:
-  Enabled: false
-
-Style/AlignParameters:
-  Enabled: false
-
-Style/ClosingParenthesisIndentation:
-  Enabled: false
-
-Style/MultilineMethodCallIndentation:
-  Enabled: false
-
-Style/IndentArray:
-  Enabled: false
-
-Style/IndentHash:
-  Enabled: false
-
-Style/AlignHash:
   Enabled: false
 
 # From http://relaxed.ruby.style/
@@ -97,10 +60,6 @@ Style/BlockDelimiters:
 Style/Documentation:
   Enabled: false
   StyleGuide: http://relaxed.ruby.style/#styledocumentation
-
-Style/DotPosition:
-  Enabled: false
-  StyleGuide: http://relaxed.ruby.style/#styledotposition
 
 Style/DoubleNegation:
   Enabled: false
@@ -166,14 +125,6 @@ Style/SingleLineMethods:
   Enabled: false
   StyleGuide: http://relaxed.ruby.style/#stylesinglelinemethods
 
-Style/SpaceBeforeBlockBraces:
-  Enabled: false
-  StyleGuide: http://relaxed.ruby.style/#stylespacebeforeblockbraces
-
-Style/SpaceInsideParens:
-  Enabled: false
-  StyleGuide: http://relaxed.ruby.style/#stylespaceinsideparens
-
 Style/SpecialGlobalVars:
   Enabled: false
   StyleGuide: http://relaxed.ruby.style/#stylespecialglobalvars
@@ -234,3 +185,48 @@ Metrics/PerceivedComplexity:
 
 Naming/BinaryOperatorParameterName:
   Enabled: false
+
+Naming/PredicateName:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Layout/EndAlignment:
+  Enabled: false
+
+Layout/ElseAlignment:
+  Enabled: false
+
+Layout/IndentationWidth:
+  Enabled: false
+
+Layout/AlignParameters:
+  Enabled: false
+
+Layout/ClosingParenthesisIndentation:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Layout/IndentFirstArrayElement:
+  Enabled: false
+
+Layout/IndentFirstHashElement:
+  Enabled: false
+
+Layout/AlignHash:
+  Enabled: false
+
+Layout/DotPosition:
+  Enabled: false
+  StyleGuide: http://relaxed.ruby.style/#styledotposition
+
+Layout/SpaceBeforeBlockBraces:
+  Enabled: false
+  StyleGuide: http://relaxed.ruby.style/#stylespacebeforeblockbraces
+
+Layout/SpaceInsideParens:
+  Enabled: false
+  StyleGuide: http://relaxed.ruby.style/#stylespaceinsideparens
