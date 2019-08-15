@@ -24,6 +24,7 @@ require 'vcr'
 require 'webmock'
 require 'capybara/rspec'
 require 'selenium-webdriver'
+require 'pry'
 
 Capybara.register_driver :geckodriver do |app|
   ::Selenium::WebDriver::Firefox.driver_path = ENV['DRIVER_PATH']
