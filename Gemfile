@@ -11,14 +11,12 @@ gemspec
 
 gem 'pry'
 
-group :test do
-  gem 'ffaker'
-  gem 'mysql2', '0.4.10'
-  gem 'pg', '~> 0.15'
-  gem 'puma'
-  gem 'sqlite3'
-  gem 'vcr'
-  gem 'webmock'
-end
+gem 'ffaker'
+gem 'mysql2', '~> 0.5'
+gem 'pg', '~> 1.1'
+gem 'puma'
+gem 'sqlite3'
+gem 'vcr'
+gem 'webmock'
 
 gem 'activemerchant', github: 'activemerchant/active_merchant'
