@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Spree::Order, type: :model do
-  let(:order) { Spree::Order.new }
+  let(:order) { described_class.new }
 
   it 'has customer document attribute' do
     document = '43920390'
@@ -13,11 +13,11 @@ describe Spree::Order, type: :model do
 
   describe 'state_machine' do
     it 'dont have confirm state' do
-      expect(Spree::Order.checkout_steps.key?(:confirm)).to be(false)
+      expect(described_class.checkout_steps.key?(:confirm)).to be(false)
     end
 
     context 'with payment_failed event' do
-      let(:event) { Spree::Order.state_machine.events[:payment_failed] }
+      let(:event) { described_class.state_machine.events[:payment_failed] }
 
       it 'not have confirm state' do
         expect(event.known_states.include?(:confirm)).to be(false)
