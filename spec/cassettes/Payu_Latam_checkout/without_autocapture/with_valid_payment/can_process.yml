@@ -5,12 +5,12 @@ http_interactions:
     uri: https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi
     body:
       encoding: UTF-8
-      string: '{"test":true,"language":"en","command":"SUBMIT_TRANSACTION","merchant":{"apiLogin":"pRRXKOl8ikMmt9u","apiKey":"4Vj8eK4rloUd272L48hsrarnUA"},"transaction":{"paymentCountry":"PE","type":"AUTHORIZATION","ipAddress":"127.0.0.1","order":{"accountId":"512323","referenceCode":"R881876906-6MT2UYWE","description":"Compra
+      string: '{"test":true,"language":"en","command":"SUBMIT_TRANSACTION","merchant":{"apiLogin":"pRRXKOl8ikMmt9u","apiKey":"4Vj8eK4rloUd272L48hsrarnUA"},"transaction":{"paymentCountry":"PE","type":"AUTHORIZATION","ipAddress":"127.0.0.1","order":{"accountId":"512323","referenceCode":"R779694336-W3NXLW35","description":"Compra
         en 508029","language":"en","shippingAddress":{"street1":"YT-1300","street2":"","city":"Mos
         Eisley","state":"AL","country":"US","postalCode":"12010","phone":"(555) 555-5555"},"buyer":{"fullName":"APPROVED
-        .","dniNumber":"32144457","dniType":null,"emailAddress":"han@example.com","contactPhone":"(555)
+        .","dniNumber":"32144457","dniType":null,"merchantBuyerId":null,"emailAddress":"han@example.com","contactPhone":"(555)
         555-5555","shippingAddress":{"street1":"YT-1300","street2":"","city":"Mos
-        Eisley","state":"AL","country":"US","postalCode":"12010","phone":"(555) 555-5555"}},"additionalValues":{"TX_VALUE":{"value":"19.99","currency":"PEN"}},"signature":"7ac8508cb6d614f0433a7777a871aa24"},"creditCard":{"number":"4111111111111111","securityCode":"123","expirationDate":"2020/09","name":"APPROVED
+        Eisley","state":"AL","country":"US","postalCode":"12010","phone":"(555) 555-5555"}},"additionalValues":{"TX_VALUE":{"value":"19.99","currency":"PEN"}},"signature":"72c5ea3549492aefa062657117992051"},"creditCard":{"number":"4111111111111111","securityCode":"123","expirationDate":"2020/09","name":"APPROVED
         ."},"paymentMethod":"VISA","payer":{"fullName":"APPROVED .","contactPhone":"(555)
         555-5555","dniNumber":"32144457","emailAddress":"han@example.com","billingAddress":{"street1":"YT-1300","street2":"","city":"Mos
         Eisley","state":"AL","country":"US","phone":"(555) 555-5555"}},"extraParameters":{"INSTALLMENTS_NUMBER":1}}}'
@@ -37,14 +37,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 15 Aug 2019 21:01:21 GMT
+      - Tue, 01 Oct 2019 22:22:56 GMT
       Connection:
       - close
       Server:
       - PayU server
     body:
       encoding: UTF-8
-      string: '{"code":"SUCCESS","error":null,"transactionResponse":{"orderId":846245779,"transactionId":"5e1de4c1-9aca-4f5b-847b-194e16a4fee8","state":"APPROVED","paymentNetworkResponseCode":null,"paymentNetworkResponseErrorMessage":null,"trazabilityCode":"00000000","authorizationCode":"00000000","pendingReason":null,"responseCode":"APPROVED","errorCode":null,"responseMessage":null,"transactionDate":null,"transactionTime":null,"operationDate":1565902880895,"referenceQuestionnaire":null,"extraParameters":{"PAYMENT_WAY_ID":"4","BANK_REFERENCED_CODE":"CREDIT"},"additionalInfo":null}}'
+      string: '{"code":"SUCCESS","error":null,"transactionResponse":{"orderId":846649807,"transactionId":"4ba0506d-0133-4d16-9ed8-64a58ad934db","state":"APPROVED","paymentNetworkResponseCode":null,"paymentNetworkResponseErrorMessage":null,"trazabilityCode":"00000000","authorizationCode":"00000000","pendingReason":null,"responseCode":"APPROVED","errorCode":null,"responseMessage":null,"transactionDate":null,"transactionTime":null,"operationDate":1569968576032,"referenceQuestionnaire":null,"extraParameters":{"PAYMENT_WAY_ID":"4","BANK_REFERENCED_CODE":"CREDIT"},"additionalInfo":null}}'
     http_version: 
-  recorded_at: Thu, 15 Aug 2019 21:01:21 GMT
+  recorded_at: Tue, 01 Oct 2019 22:22:56 GMT
 recorded_with: VCR 5.0.0
