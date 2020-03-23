@@ -8,15 +8,18 @@ describe 'Payu Latam checkout', :vcr, type: :feature do
   let(:product) { create(:product) }
 
   before do
-    stub_spree_preferences(
-      currency: 'PEN',
-      use_combined_first_and_last_name_in_address: false
-    )
+    config = { currency: 'PEN' }
+
+    if Spree.solidus_gem_version >= Gem::Version.new('2.9')
+      config.merge!(use_combined_first_and_last_name_in_address: false)
+    end
+
+    stub_preferences(config)
   end
 
   context 'with autocapture' do
     before do
-      stub_spree_preferences(auto_capture: true)
+      stub_preferences(auto_capture: true)
       setup_payu_latam_gateway
       zone.members << Spree::ZoneMember.create!(zoneable: country)
       create(:store)

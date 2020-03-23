@@ -30,4 +30,12 @@ module PayuLatamHelper
     fill_in 'Zip', with: '12010'
     fill_in 'Phone', with: '(555) 555-5555'
   end
+
+  def stub_preferences(preferences)
+    if Spree.solidus_gem_version >= Gem::Version.new('2.9')
+      stub_spree_preferences(preferences)
+    else
+      Spree::Config.set(preferences)
+    end
+  end
 end
