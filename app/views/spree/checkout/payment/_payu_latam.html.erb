@@ -2,6 +2,6 @@
 <% param_prefix = "payment_source[#{payment_method.id}]" %>
 
 <p class="field">
-  <%= label_tag "document", Spree.t(:document) %><span class="required">*</span><br />
+  <%= label_tag "document", I18n.t('spree.document') %><span class="required">*</span><br />
   <%= text_field_tag '[order][customer_document]', '', id: 'customer_document', class: "required customerDocument", "payu-content": "document" %>
 </p>
