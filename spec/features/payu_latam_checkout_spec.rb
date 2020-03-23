@@ -8,7 +8,10 @@ describe 'Payu Latam checkout', :vcr, type: :feature do
   let(:product) { create(:product) }
 
   before do
-    stub_spree_preferences(currency: 'PEN')
+    stub_spree_preferences(
+      currency: 'PEN',
+      use_combined_first_and_last_name_in_address: false
+    )
   end
 
   context 'with autocapture' do
