@@ -7,9 +7,13 @@ describe 'Payu Latam checkout', :vcr, type: :feature do
   let(:country) { create(:country) }
   let(:product) { create(:product) }
 
+  before do
+    stub_spree_preferences(currency: 'PEN')
+  end
+
   context 'with autocapture' do
     before do
-      Spree::Config.set(auto_capture: true)
+      stub_spree_preferences(auto_capture: true)
       setup_payu_latam_gateway
       zone.members << Spree::ZoneMember.create!(zoneable: country)
       create(:store)
@@ -33,7 +37,6 @@ describe 'Payu Latam checkout', :vcr, type: :feature do
 
   context 'without autocapture' do
     before do
-      Spree::Config.set(currency: 'PEN')
       setup_payu_latam_gateway
       zone.members << Spree::ZoneMember.create!(zoneable: country)
       create(:store)

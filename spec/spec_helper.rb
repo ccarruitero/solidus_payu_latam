@@ -97,7 +97,6 @@ RSpec.configure do |config|
   config.before do
     DatabaseCleaner.strategy = RSpec.current_example.metadata[:js] ? :truncation : :transaction
     DatabaseCleaner.start
-    reset_spree_preferences
   end
 
   # After each spec clean the database.

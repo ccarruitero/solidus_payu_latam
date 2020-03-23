@@ -21,8 +21,7 @@ module PayuLatamHelper
   end
 
   def fill_address(country)
-    fill_in 'First Name', with: 'APPROVED'
-    fill_in 'Last Name', with: '.'
+    fill_in 'Name', with: 'APPROVED'
     fill_in 'Street Address', with: 'YT-1300'
     fill_in 'City', with: 'Mos Eisley'
     select 'United States of America', from: 'Country'
