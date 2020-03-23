@@ -27,7 +27,7 @@ require 'selenium-webdriver'
 require 'pry'
 
 Capybara.register_driver :geckodriver do |app|
-  ::Selenium::WebDriver::Firefox.driver_path = ENV['DRIVER_PATH']
+  ::Selenium::WebDriver::Firefox::Service.driver_path = ENV['DRIVER_PATH']
   options = ::Selenium::WebDriver::Firefox::Options.new
   options.args << '--headless'
 
