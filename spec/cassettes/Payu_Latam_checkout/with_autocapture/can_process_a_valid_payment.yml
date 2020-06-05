@@ -5,13 +5,11 @@ http_interactions:
     uri: https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi
     body:
       encoding: UTF-8
-      string: '{"test":true,"language":"en","command":"SUBMIT_TRANSACTION","merchant":{"apiLogin":"pRRXKOl8ikMmt9u","apiKey":"4Vj8eK4rloUd272L48hsrarnUA"},"transaction":{"paymentCountry":"PE","type":"AUTHORIZATION_AND_CAPTURE","ipAddress":"127.0.0.1","order":{"accountId":"512323","referenceCode":"R437146780-5RBJ3PHC","description":"Compra
+      string: '{"test":true,"language":"en","command":"SUBMIT_TRANSACTION","merchant":{"apiLogin":"pRRXKOl8ikMmt9u","apiKey":"4Vj8eK4rloUd272L48hsrarnUA"},"transaction":{"paymentCountry":"PE","type":"AUTHORIZATION_AND_CAPTURE","ipAddress":"127.0.0.1","order":{"accountId":"512323","referenceCode":"R811687392-J386DXGZ","description":"Compra
         en 508029","language":"en","shippingAddress":{"street1":"YT-1300","street2":"","city":"Mos
-        Eisley","state":"AL","country":"US","postalCode":"12010","phone":"(555) 555-5555"},"buyer":{"fullName":"APPROVED
-        .","dniNumber":"32144457","dniType":null,"merchantBuyerId":null,"emailAddress":"han@example.com","contactPhone":"(555)
+        Eisley","state":"AL","country":"US","postalCode":"12010","phone":"(555) 555-5555"},"buyer":{"fullName":"APPROVED","dniNumber":"32144457","dniType":null,"merchantBuyerId":null,"emailAddress":"han@example.com","contactPhone":"(555)
         555-5555","shippingAddress":{"street1":"YT-1300","street2":"","city":"Mos
-        Eisley","state":"AL","country":"US","postalCode":"12010","phone":"(555) 555-5555"}},"additionalValues":{"TX_VALUE":{"value":"19.99","currency":"USD"}},"signature":"560141dc21d554e9623dc3b9d695e15c"},"creditCard":{"number":"4111111111111111","securityCode":"123","expirationDate":"2021/09","name":"APPROVED
-        ."},"paymentMethod":"VISA","payer":{"fullName":"APPROVED .","contactPhone":"(555)
+        Eisley","state":"AL","country":"US","postalCode":"12010","phone":"(555) 555-5555"}},"additionalValues":{"TX_VALUE":{"value":"19.99","currency":"PEN"}},"signature":"f865ffd6eb1f5c2a573a538190232956"},"creditCard":{"number":"4111111111111111","securityCode":"123","expirationDate":"2021/09","name":"APPROVED"},"paymentMethod":"VISA","payer":{"fullName":"APPROVED","contactPhone":"(555)
         555-5555","dniNumber":"32144457","emailAddress":"han@example.com","billingAddress":{"street1":"YT-1300","street2":"","city":"Mos
         Eisley","state":"AL","country":"US","phone":"(555) 555-5555"}},"extraParameters":{"INSTALLMENTS_NUMBER":1}}}'
     headers:
@@ -30,21 +28,24 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      X-Frame-Options:
-      - sameorigin
+      Server:
+      - nginx
+      Date:
+      - Fri, 05 Jun 2020 20:19:18 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
-      Date:
-      - Mon, 23 Mar 2020 15:13:42 GMT
       Connection:
       - close
-      Server:
-      - PayU server
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
     body:
       encoding: UTF-8
-      string: '{"code":"SUCCESS","error":null,"transactionResponse":{"orderId":849192154,"transactionId":"29c7e530-5b2c-4ac3-bfea-d458bfd4d3b0","state":"APPROVED","paymentNetworkResponseCode":null,"paymentNetworkResponseErrorMessage":null,"trazabilityCode":"00000000","authorizationCode":"00000000","pendingReason":null,"responseCode":"APPROVED","errorCode":null,"responseMessage":null,"transactionDate":null,"transactionTime":null,"operationDate":1584976421737,"referenceQuestionnaire":null,"extraParameters":{"PAYMENT_WAY_ID":"4","BANK_REFERENCED_CODE":"CREDIT"},"additionalInfo":null}}'
-    http_version: null
-  recorded_at: Mon, 23 Mar 2020 15:13:42 GMT
-recorded_with: VCR 5.1.0
+      string: '{"code":"SUCCESS","error":null,"transactionResponse":{"orderId":851589636,"transactionId":"0296e10a-2554-4749-b079-4309227a868d","state":"APPROVED","paymentNetworkResponseCode":null,"paymentNetworkResponseErrorMessage":null,"trazabilityCode":"00000000","authorizationCode":"00000000","pendingReason":null,"responseCode":"APPROVED","errorCode":null,"responseMessage":null,"transactionDate":null,"transactionTime":null,"operationDate":1591388358030,"referenceQuestionnaire":null,"extraParameters":{"BANK_REFERENCED_CODE":"CREDIT","PAYMENT_WAY_ID":"4"},"additionalInfo":null}}'
+  recorded_at: Fri, 05 Jun 2020 20:19:18 GMT
+recorded_with: VCR 6.0.0
