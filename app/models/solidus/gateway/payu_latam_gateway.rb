@@ -45,9 +45,6 @@ module Solidus
     def add_missing_fields(options, cvv)
       dni_number = options[:customer_document]
       options.merge(
-        buyer_email: options[:email],
-        buyer_name: options[:shipping_address][:name],
-        buyer_dni_number: dni_number,
         dni_number: dni_number,
         cvv: cvv
       )
