@@ -69,20 +69,15 @@ describe 'Payu Latam checkout', :vcr, type: :feature do
         expect(page).to have_content('Your order has been processed successfully')
       end
 
-      # temporally skip capture since there is a bug in Payu Latam sandbox
-      xit 'capture payment' do
-        sleep(5)
+      it 'capture payment' do
         visit spree.admin_order_payments_path(Spree::Order.last)
-        sleep(3)
         click_icon(:capture)
         expect(page).to have_content('Payment Updated')
       end
 
-      # skip void since is not allowed in sandbox for Payu Latam
-      xit 'voids a payment' do
-        sleep(5)
+      it 'voids a payment' do
         visit spree.admin_order_payments_path(Spree::Order.last)
-        sleep(3)
+        click_icon(:capture)
         click_icon(:void)
         expect(page).to have_content('Payment Updated')
       end
