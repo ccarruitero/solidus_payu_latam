@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi
+    body:
+      encoding: UTF-8
+      string: '{"test":true,"language":"en","command":"SUBMIT_TRANSACTION","merchant":{"apiLogin":"pRRXKOl8ikMmt9u","apiKey":"4Vj8eK4rloUd272L48hsrarnUA"},"transaction":{"paymentCountry":"PE","type":"AUTHORIZATION","ipAddress":"127.0.0.1","order":{"accountId":"512323","referenceCode":"R250370849-LBUGFVZD","description":"Compra
+        en 508029","language":"en","shippingAddress":{"street1":"YT-1300","street2":"","city":"Mos
+        Eisley","state":"AL","country":"US","postalCode":"12010","phone":"(555) 555-5555"},"buyer":{"fullName":"APPROVED
+        .","dniNumber":"32144457","dniType":null,"merchantBuyerId":null,"emailAddress":"han@example.com","contactPhone":"(555)
+        555-5555","shippingAddress":{"street1":"YT-1300","street2":"","city":"Mos
+        Eisley","state":"AL","country":"US","postalCode":"12010","phone":"(555) 555-5555"}},"additionalValues":{"TX_VALUE":{"value":"19.99","currency":"PEN"}},"signature":"657e805e58e971aa50ca38e43a7c1982"},"creditCard":{"number":"4111111111111111","securityCode":"123","expirationDate":"2021/09","name":"APPROVED
+        ."},"paymentMethod":"VISA","payer":{"fullName":"APPROVED .","contactPhone":"(555)
+        555-5555","dniNumber":"32144457","emailAddress":"han@example.com","billingAddress":{"street1":"YT-1300","street2":"","city":"Mos
+        Eisley","state":"AL","country":"US","phone":"(555) 555-5555"}},"extraParameters":{"INSTALLMENTS_NUMBER":1}}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 23 Jul 2020 00:21:48 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '{"code":"SUCCESS","error":null,"transactionResponse":{"orderId":120272435,"transactionId":"fbbaccc3-468b-42e8-bebe-657e1aabf576","state":"APPROVED","paymentNetworkResponseCode":"000","paymentNetworkResponseErrorMessage":null,"trazabilityCode":"7936","authorizationCode":"497845","pendingReason":null,"responseCode":"APPROVED","errorCode":null,"responseMessage":"Aprobado
+        y completado con exito","transactionDate":null,"transactionTime":null,"operationDate":1595445708439,"referenceQuestionnaire":null,"extraParameters":{"BANK_REFERENCED_CODE":"CREDIT"},"additionalInfo":null}}'
+  recorded_at: Thu, 23 Jul 2020 00:21:48 GMT
+- request:
+    method: post
+    uri: https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi
+    body:
+      encoding: UTF-8
+      string: '{"test":true,"language":"en","command":"SUBMIT_TRANSACTION","merchant":{"apiLogin":"pRRXKOl8ikMmt9u","apiKey":"4Vj8eK4rloUd272L48hsrarnUA"},"transaction":{"paymentCountry":"PE","type":"CAPTURE","ipAddress":"127.0.0.1","order":{"id":"120272435"},"parentTransactionId":"fbbaccc3-468b-42e8-bebe-657e1aabf576","reason":"n/a","additionalValues":{"TX_VALUE":{"value":"19.99","currency":"PEN"}}}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 23 Jul 2020 00:22:01 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '{"code":"SUCCESS","error":null,"transactionResponse":{"orderId":120272435,"transactionId":"64e67b24-089f-4987-88ec-2fed4cb238fd","state":"APPROVED","paymentNetworkResponseCode":"000","paymentNetworkResponseErrorMessage":null,"trazabilityCode":"77821","authorizationCode":"170921","pendingReason":null,"responseCode":"APPROVED","errorCode":null,"responseMessage":"Aprobado
+        y completado con exito","transactionDate":null,"transactionTime":null,"operationDate":1595445721765,"referenceQuestionnaire":null,"extraParameters":null,"additionalInfo":null}}'
+  recorded_at: Thu, 23 Jul 2020 00:22:01 GMT
+recorded_with: VCR 6.0.0
